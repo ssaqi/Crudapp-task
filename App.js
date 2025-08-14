@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 // Import screens
 import ListItems from './src/screens/ListItems';
@@ -47,12 +47,14 @@ export default function App() {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ color, size }) => {
             let iconName;
+
             if (route.name === 'Home') {
-              iconName = 'home-outline';
+              iconName = 'home'; // MaterialIcons name
             } else if (route.name === 'Add') {
-              iconName = 'add-circle-outline';
+              iconName = 'add-circle-outline'; // MaterialIcons name
             }
-            return <Ionicons name="home-outline" size={50} color="green" />;
+
+            return <Icon name={iconName} size={size} color={color} />;
           },
           tabBarActiveTintColor: '#4CAF50',
           tabBarInactiveTintColor: '#aaa',

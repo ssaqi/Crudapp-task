@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 // For emulator use 10.0.2.2 instead of localhost 
-const BASE_URL = 'http://192.168.0.105/api/items.php';
-// const BASE_URL = 'http://192.168.10.9/api/items.php';  emulator 
+// const BASE_URL = 'http://192.168.0.105/api/items.php';
+const BASE_URL = 'http://192.168.10.9/api/items.php';  
 
 
 export const getItems = async () => {
